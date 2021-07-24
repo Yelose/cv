@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #111;
+}
+nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(92, 43, 226, 0.8);
+  color: white;
+  box-shadow: 1px 1px 4px rgba(74, 34, 184, 0.8);
+}
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+nav ul li {
+  list-style: none;
+  padding: 0.2em;
+  padding: 1vw;
+}
+nav ul li a,
+nav ul li a:visited {
+  text-decoration: none;
+  color: white;
+}
+nav ul li:hover {
+  background-color: rgba(74, 34, 184, 0.8);
+  cursor: pointer;
+  box-shadow: 1px 1px rgba(74, 34, 184, 0.8), 2px 2px rgba(74, 34, 184, 0.8),
+    3px 3px 5px rgba(74, 34, 184, 0.8);
+}
+section {
+  margin-top: 5vw;
+}
+h1 {
+  font-size: 200%;
+  text-align: center;
+  padding: 1em 0;
+  text-shadow: 1px 1px grey, 2px 2px grey, 3px 3px grey,
+    4px 4px 5px rgb(126, 126, 126);
+  color: rgb(46, 46, 46);
+}
+h2 {
+  font-size: 150%;
+  text-align: center;
+  margin-bottom: 1em;
+  text-shadow: 1px 1px rgb(0, 0, 0), 0px 0px 3px grey;
+  color: rgb(156, 156, 156);
+  font-weight: lighter;
+}
+h3 {
+  font-size: 120%;
+  text-align: center;
+  margin-bottom: 2vh;
+  font-weight: lighter;
+  text-shadow: 1px 1px black, 0px 0px 4px blue;
+}
+hr {
+  margin: 2em;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap-reverse;
+  align-items: stretch;
+}
+.info table th,
+.info table tr {
+  padding: 5px;
+}
+.info table th,
+.skills table th {
+  text-align: right;
+  padding-right: 1em;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.contact-info h2 {
+  padding-top: 1.5em;
+}
+.personal-statement {
+  display: flex;
+  text-align: justify;
+  padding: 0px 4vw;
+  flex-wrap: wrap;
+}
+.personal-statement p {
+  flex: 1;
+  flex-shrink: 0.5;
+}
+p {
+  padding: 2vw;
+}
+.skills-tables {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0px 2em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.skills-tables table {
+  margin: 2vw;
+}
+.skills-tables table tr:nth-child(even) {
+  background-color: rgb(218, 218, 218);
+}
+.skills-tables table tr:nth-child(odd) {
+  background-color: rgb(190, 190, 190);
+}
+.skills-tables table th,
+.skills-tables table td {
+  padding: 1vw 1em;
+}
+.education {
+  margin: 6vh 12vw;
+}
+.education li {
+  margin-left: 3em;
+  padding: 1vh 0px;
+}
+.jobs {
+  padding: 0px 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jobs table {
+  width: 80%;
+  margin-left: 10%;
+}
+.volunteering {
+  margin-top: 6vh;
+}
+.jobs td {
+  font-size: 80%;
+  padding: 1vw;
+}
+.jobs td:nth-child(1) {
+  text-align: right;
+}
+.jobs th {
+  padding: 2vw;
+}
+.jobs tr:nth-child(odd) {
+  background-color: rgb(231, 231, 231);
+}
+.jobs tr:nth-child(even) {
+  background-color: rgb(243, 242, 242);
+}
+.cross {
+  margin: 0px 4vw;
+  text-align: justify;
+}
+footer {
+  display: flex;
+  background-color: rgb(56, 56, 136);
+  border-top: solid 3px black;
+  flex-wrap: wrap-reverse;
+  padding: 2vw;
+}
+footer section {
+  padding: 2vw 0px;
+  margin: 0;
+  flex: 1;
+}
+footer h3 {
+  color: white;
+}
+footer p {
+  font-size: 80%;
+  font-weight: lighter;
+  color: rgb(193, 255, 234);
+}
+footer p a {
+  font-size: 90%;
+}
+footer a {
+  color: aquamarine;
+  font-size: 70%;
+  padding-left: 2vw;
+}
+footer a:visited {
+  color: aqua;
+}
+footer li {
+  margin-left: 5vw;
+  list-style: none;
+}
+footer ul li::before {
+  content: "\2022";
+  color: aquamarine;
+  display: inline-block;
+  width: 5px;
+}
+/* Very small mobile phones */
+@media screen and (max-width: 410px) {
+  * {
+    font-size: 15px;
+  }
+  .education {
+    margin: 2vh 0px;
+  }
+
+  .jobs {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  .jobs table {
+    width: 100vw;
+    font-size: smaller;
+    font-weight: lighter;
+    font-stretch: condensed;
+    margin: 0;
+  }
+  .jobs td {
+    font-size: 70%;
+    padding: 0;
+    margin: 0;
+  }
+  .jobs th {
+    font-size: 80%;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* Mobile width    */
+@media only screen and (max-width: 700px) {
+  * {
+    font-size: 17px;
+  }
+  .personal-statement {
+    flex-direction: column;
+  }
+  .education {
+    margin: 3vh 6vw;
+  }
+  footer {
+    flex-direction: column-reverse;
+  }
+  footer section {
+    margin: 3vw;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  footer section main {
+    padding: 0px 3vw;
+  }
+  footer section p {
+    text-align: center;
+  }
+}
